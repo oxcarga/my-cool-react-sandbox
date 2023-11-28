@@ -1,0 +1,30 @@
+.todo-row {
+  cursor: pointer;
+  display: grid;
+  grid-template-columns: 0.1fr 2fr 0.1fr;
+  align-items: center;
+  &:hover {
+    background-color: aliceblue;
+    i.delete {
+      display: block;
+    }
+  }
+  span {
+    line-height: 25px;
+    margin: 0px;
+    display: inline-block;
+    font-size: 28px;
+    &.placeholder {
+      color: grey;
+    }
+  }
+
+  &.completed span {
+    text-decoration: line-through;
+  }
+
+  i.delete {
+    display: none;
+    float: right;
+  }
+}
